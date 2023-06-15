@@ -8,11 +8,11 @@ void sayDigit(int n,string arr[]){
         
     int digit = n % 10;
     n = n/10;
+   
+    sayDigit(n,arr);
     
     cout << arr[digit] << endl;
     
-    sayDigit(n,arr);
-           
 }
 
 
@@ -22,11 +22,14 @@ void sayDigit(int n,string arr[]){
         "six" , "seven" , "eight" , "nine" };
         
         int n;
+        
+        cout << "Input Number : " << endl;
+        
         cin >> n;
         
-        cout << endl;
+       
         sayDigit(n , arr);
-        cout << endl;
+       
 
     return 0;
 }
